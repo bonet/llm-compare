@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+langchain = "==0.1.7"
+ollama = "==0.1.6"
+langchain-openai = "==0.0.6"
+langchain-google-genai = "==0.0.9"
+
+[requires]
+python_version = "3.11"
