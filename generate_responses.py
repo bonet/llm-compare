@@ -11,6 +11,8 @@ Kickstarter campaign for your creative project''',
 
 for model in ['llama2', 'mixtral']:
     for index, question in enumerate(questions):
+        q_index = index + 1
+        print(f'{model} -- Processing question: {q_index}')
         response = ollama.chat(model=model, messages=[
             {
                 'role': 'user',
@@ -19,7 +21,7 @@ for model in ['llama2', 'mixtral']:
         ])
 
         if response:
-            filename = f'results/{model}_question_{index + 1}.txt'
-            f = open(filename, "a")
-            f.write(response['message']['content'])
+            filename = f'results/{model}_question_{q_index}.txt'
+            f = open(filename, 'w')
+            f.write(response['message']['content'].strip())
             f.close()
