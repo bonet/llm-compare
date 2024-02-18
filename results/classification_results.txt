@@ -1,0 +1,188 @@
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0
+Classifier Model: llama2
+Guessed Number: 3
+Correct Number: 1
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0
+Classifier Model: mixtral
+Guessed Number: 2
+Correct Number: 2
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0
+Classifier Model: openai
+Guessed Number: 1
+Correct Number: 3
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0.3
+Classifier Model: llama2
+Guessed Number: 1
+Correct Number: 1
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0.3
+Classifier Model: mixtral
+Guessed Number: 2
+Correct Number: 2
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0.3
+Classifier Model: openai
+Guessed Number: N/A
+Correct Number: 3
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0.7
+Classifier Model: llama2
+Guessed Number: 3
+Correct Number: 1
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0.7
+Classifier Model: mixtral
+Guessed Number: 2
+Correct Number: 2
+
+
+Question: Give me a 5-paragraph summary of Moby-Dick
+Temperature: 0.7
+Classifier Model: openai
+Guessed Number: 1
+Correct Number: 3
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0
+Classifier Model: llama2
+Guessed Number: 3
+Correct Number: 1
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0
+Classifier Model: mixtral
+Guessed Number: 2
+Correct Number: 2
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0
+Classifier Model: openai
+Guessed Number: 1
+Correct Number: 3
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0.3
+Classifier Model: llama2
+Guessed Number: 3
+Correct Number: 1
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0.3
+Classifier Model: mixtral
+Guessed Number: 3
+Correct Number: 2
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0.3
+Classifier Model: openai
+Guessed Number: 1
+Correct Number: 3
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0.7
+Classifier Model: llama2
+Guessed Number: 2
+Correct Number: 1
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0.7
+Classifier Model: mixtral
+Guessed Number: 2
+Correct Number: 2
+
+
+Question: Write a step-by-step tutorial on how to create and launch a successful Kickstarter campaign for your creative project
+Temperature: 0.7
+Classifier Model: openai
+Guessed Number: 1
+Correct Number: 3
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0
+Classifier Model: llama2
+Guessed Number: 3
+Correct Number: 1
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0
+Classifier Model: mixtral
+Guessed Number: 3
+Correct Number: 2
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0
+Classifier Model: openai
+Guessed Number: 1
+Correct Number: 3
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0.3
+Classifier Model: llama2
+Guessed Number: 3
+Correct Number: 1
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0.3
+Classifier Model: mixtral
+Guessed Number: 3
+Correct Number: 2
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0.3
+Classifier Model: openai
+Guessed Number: 1
+Correct Number: 3
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0.7
+Classifier Model: llama2
+Guessed Number: 3
+Correct Number: 1
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0.7
+Classifier Model: mixtral
+Guessed Number: 3
+Correct Number: 2
+
+
+Question: Write a story about a group of friends who embark on a dangerous journey to find a legendary treasure hidden deep in the jungle. Along the way, they must face treacherous obstacles, deadly creatures, and their own personal demons
+Temperature: 0.7
+Classifier Model: openai
+Guessed Number: N/A
+Correct Number: 3
+
