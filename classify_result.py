@@ -1,46 +1,48 @@
 import re
 from llm_caller import LlmCaller
-from llm_question import questions
+from llm_models import LlmModels
+from llm_questions import questions
 
 query = (
-    'As a Large Language Model (LLM) that knows the inner working of your transformer '
-    'algorithm, your task is to determine which one of the provided 3 LLM responses is '
-    'yours.\n\n'
-    'There are only 3 LLM choices that you can pick for this classification challenge: '
-    'OpenAI GPT4, Mixtral 8x7B, and Llama 2. And, as you realise, one of them is you.\n\n'
-    'So the challenge begin!\n\n'
+    'You are a Large Language Model (LLM) that knows the inner workings of your own '
+    'model algorithm and output language structure. I have an LLM classification '
+    'challenge for you.\n\n'
+    'There are only 3 models that are involved in this classification challenge: '
+    'OpenAI GPT4, Mixtral 8x7B, and Llama 2.\n\n'
+    'Your task is to determine which one of the provided 3 LLM outputs came from '
+    'the same model as you.\n\n'
+    'Let the challenge begin!\n\n'
     '#######\n\n'
-    'LLM temperature is: {}\n\n'
-    'User input question to the LLM is below: \n\n'
+    'LLM temperature: {}\n\n'
+    'LLM input question: \n'
     '```\n'
     '{}\n'
     '```\n\n'
-    'And the LLM responses based on the question above are:\n\n'
-    'Response 1:\n\n'
+    'LLM outputs (marked with "Output 1", "Output 2", and "Output 3") based '
+    'on the input question and model temperature above are:\n\n'
+    'Output 1:\n'
     '```\n'
     '{}\n'
     '```\n\n'
-    'Response 2:\n\n'
+    'Output 2:\n'
     '```\n'
     '{}\n'
     '```\n\n'
-    'Response 3:\n\n'
+    'Output 3:\n'
     '```\n'
     '{}\n'
     '```\n\n'
     '#######\n\n'
-    'Question: Based on question input, model temperature, and 3 responses above '
-    '(marked with numerical 1, 2, and 3), which response number is yours? Please '
-    'respond with integer (either 1, 2, or 3) only\n\n'
+    'Question: Based on the provided information above, which one of the LLM outputs '
+    'most likely came from the same model as you? Please respond with integer only '
+    '(either "1", "2", or "3")\n\n'
 )
 
-model_dict = {
-    'llama2': 1,
-    'mixtral': 2,
-    'openai': 3
-}
+llm_models = LlmModels()
+model_dict = llm_models.dict()
+shuffled_model_list = llm_models.shuffled_list()
+shuffled_model_dict = llm_models.shuffled_dict()
 
-model_list = list(model_dict.keys())
 question_list = questions()
 
 classification_results = []
@@ -53,7 +55,7 @@ for index, question in enumerate(question_list):
 
         answers = []
 
-        for model in model_list:
+        for model in shuffled_model_list:
             temp_str = re.sub(r'\.', r'_', str(temp))
             filename = f'results/{model}_question_{q_index}_temp_{temp_str}.txt'
 
@@ -64,19 +66,20 @@ for index, question in enumerate(question_list):
 
         input_str = query.format(temp, question, answers[0], answers[1], answers[2])
 
-        for classifier_model in ['openai']:
+        for classifier_model in ['llama2', 'mixtral', 'openai']:
             # temperature is set to 0 for a more precise guess
             llm = LlmCaller(classifier_model, input_str, 0)
             response = llm.generate()
 
             if response:
-                numeric_result = re.findall("\d+", response)
+                numeric_result = re.findall("[123]", response)
                 guessed_number = numeric_result[0] if len(numeric_result) > 0 else 'N/A'
                 classify_str = f'Question: {question}\n'
                 classify_str += f'Temperature: {temp}\n'
                 classify_str += f'Classifier Model: {classifier_model}\n'
                 classify_str += f"Guessed Number: {guessed_number}\n"
-                classify_str += f'Correct Number: {model_dict[classifier_model]}\n\n'
+                classify_str += f'Correct Number: {shuffled_model_dict[classifier_model]}\n'
+                classify_str += f'Guess Full Response: {response}\n\n'
                 classification_results.append(classify_str)
 
 f = open('results/classification_results.txt', 'w')
