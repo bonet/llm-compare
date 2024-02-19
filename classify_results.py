@@ -10,7 +10,8 @@ query = (
     'There are only 3 models that are involved in this classification challenge: '
     'OpenAI GPT4, Mixtral 8x7B, and Llama 2.\n\n'
     'Your task is to determine which one of the provided 3 LLM outputs came from '
-    'the same model as you.\n\n'
+    'the same model as you. Note that each output is delimited by triple backticks '
+    '(```).\n\n'
     'Let the challenge begin!\n\n'
     '#######\n\n'
     'LLM temperature: {}\n\n'
@@ -34,8 +35,8 @@ query = (
     '```\n\n'
     '#######\n\n'
     'Question: Based on the provided information above, which one of the LLM outputs '
-    'most likely came from the same model as you? Please respond with integer only '
-    '(either "1", "2", or "3")\n\n'
+    'most likely came from the same model as you? It is imperative that you answer '
+    'this question with integer only (either "1", "2", or "3")\n\n'
 )
 
 llm_models = LlmModels()
@@ -74,7 +75,8 @@ for index, question in enumerate(question_list):
             if response:
                 numeric_result = re.findall("[123]", response)
                 guessed_number = numeric_result[0] if len(numeric_result) > 0 else 'N/A'
-                classify_str = f'Question: {question}\n'
+                classify_str = f'Models: {shuffled_model_dict}\n'
+                classify_str += f'Question: {question}\n'
                 classify_str += f'Temperature: {temp}\n'
                 classify_str += f'Classifier Model: {classifier_model}\n'
                 classify_str += f"Guessed Number: {guessed_number}\n"
