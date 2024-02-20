@@ -9,7 +9,7 @@ The experiment is divided into 2 phases:
   <li>
     <b>Phase 1</b>
     <p>
-      In this phase, there are 3 different prompt inputs, each was fed into to the LLM.
+      In this phase, there are 3 different prompt inputs, each was fed into the LLM.
       <br>
       <img width="600" style="align: left" alt="LLM Compare Phase 1" src="https://github.com/bonet/llm-compare/assets/40275/1215f061-9b5c-439f-9257-adf5d2a29636">
     </p>
@@ -30,10 +30,14 @@ The experiment is divided into 2 phases:
     - On Linux: `sudo apt install pipenv`
     - On Mac: `brew install pipenv`
 
-2. Run:
+2. Add environment variables:
+    - `cp .env.example .env` to copy environment file
+    - Add your own LLM API key to `.env` file
+
+3. Run:
     - `pipenv shell` to enter virtual environment
     - `pipenv install` to install python packages listed in `Pipfile`
 
-3. Run:
+4. Run:
    - `python3 generate_results.py` to run Phase 1
    - `python3 classify_results.py` to run Phase 2
