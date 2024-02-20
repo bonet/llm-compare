@@ -30,7 +30,7 @@ The experiment is divided into 2 phases:
 
 <h3>Quickstart</h3>
 
-1. To run this project you need to have `pipenv` installed.
+1. To run this project you need to have `pipenv` installed:
     - On Linux: `sudo apt install pipenv`
     - On Mac: `brew install pipenv`
 
@@ -52,3 +52,5 @@ The experiment is divided into 2 phases:
    - `python3 classify_results.py` to run Phase 2
 
 7. The classification result can be found [here](results/classification_results.txt)
+
+A more detailed discussion about this project can be found on this [medium blog](https://bsugiarto.medium.com/llm-analysis-can-language-models-recognize-their-own-output-0658a080ab03).
